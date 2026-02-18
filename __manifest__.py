@@ -7,6 +7,9 @@
     "author": "Anton Titenko",
     "website": "https://example.com",
     "license": "LGPL-3",
+    'price': "0",
+    'currency': 'USD',
+    'images': ['static/description/icon.png'],
     "depends": [
         "base",
         "purchase"
