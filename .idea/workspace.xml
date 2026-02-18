@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58164619-ef4b-438b-81d4-acd4e36cf6ef" name="Changes" comment="edit description .html, edit faild benefits_total">
+    <list default="true" id="58164619-ef4b-438b-81d4-acd4e36cf6ef" name="Changes" comment="edit description .html, add link on github">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/benefits/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/benefits/static/description/index.html" afterDir="false" />
     </list>
@@ -186,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771451088658</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="edit description .html, add link on github">
+      <option name="closed" value="true" />
+      <created>1771451320723</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1771451320723</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +203,7 @@
     <MESSAGE value="edit index.html" />
     <MESSAGE value="directory structure changes" />
     <MESSAGE value="edit description .html, edit faild benefits_total" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit description .html, edit faild benefits_total" />
+    <MESSAGE value="edit description .html, add link on github" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit description .html, add link on github" />
   </component>
 </project>
