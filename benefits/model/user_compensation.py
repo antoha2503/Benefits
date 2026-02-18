@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models
 from odoo.exceptions import UserError
 
 class UserCompensation(models.Model):
@@ -50,10 +50,3 @@ class UserCompensation(models.Model):
             if record.state == 'canceled':
                 raise UserError("Canceled compensation cannot be marked as done.")
         self.write({'state': 'done'})
-
-    # @api.model
-    # def _add_benefits_employee(self):
-    #     dashboards = self.env['benefits.dashboard'].search([])
-    #
-    #     for dashboard in dashboards:
-    #         dashboard.total += 1000
