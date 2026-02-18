@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58164619-ef4b-438b-81d4-acd4e36cf6ef" name="Changes" comment="directory structure changes">
+    <list default="true" id="58164619-ef4b-438b-81d4-acd4e36cf6ef" name="Changes" comment="edit description .html, edit faild benefits_total">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benefits/model/custom_field_HrEmployee.py" beforeDir="false" afterPath="$PROJECT_DIR$/benefits/model/custom_field_HrEmployee.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benefits/model/user_compensation.py" beforeDir="false" afterPath="$PROJECT_DIR$/benefits/model/user_compensation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/benefits/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/benefits/static/description/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benefits/views/custom_field_HrEmployee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/benefits/views/custom_field_HrEmployee.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771446749335</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="edit description .html, edit faild benefits_total">
+      <option name="closed" value="true" />
+      <created>1771451088658</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1771451088658</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,6 +194,7 @@
     <MESSAGE value="add dir description, add icon, add index.html" />
     <MESSAGE value="edit index.html" />
     <MESSAGE value="directory structure changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="directory structure changes" />
+    <MESSAGE value="edit description .html, edit faild benefits_total" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit description .html, edit faild benefits_total" />
   </component>
 </project>
