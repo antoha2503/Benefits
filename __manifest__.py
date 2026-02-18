@@ -1,0 +1,26 @@
+{
+    "name": "Benefits for employee",
+    "version": "1.0.0",
+    "category": "Custom",
+    "summary": "benefits for you",
+    "description": "benefits for your employee",
+    "author": "Anton Titenko",
+    "website": "https://example.com",
+    "license": "LGPL-3",
+    "depends": [
+        "base",
+        "purchase"
+    ],
+    "data": [
+        'views/request_benefits_employee.xml',
+        'views/custom_field_HrEmployee.xml',
+        'views/create_user_compensation.xml',
+        'views/benefits_for_employee.xml',
+        'views/category_compensation.xml',
+        'views/menu.xml',
+        "views/ir_cron.xml",
+        "security/ir.model.access.csv"
+    ],
+    "installable": True,
+    "auto_install": False,
+}

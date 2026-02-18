@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="root_benefits_for_employee" name="Benefits" sequence="9"/>
+
+    <menuitem id="benefits_for_employee" parent="root_benefits_for_employee" action="action_benefits_dashboard" name="Benefits" sequence="8"/>
+    <menuitem id="request_benefits_employee" parent="root_benefits_for_employee" action="action_request_benefits_employee" name="Request from employee" groups="base.group_system" sequence="8"/>
+    <menuitem id="category_compensation" parent="root_benefits_for_employee" action="action_category_compensation" name="Compensations" groups="base.group_system" sequence="9"/>
+
+    <menuitem id="hr_benefits_for_employee" parent="hr.menu_hr_root" action="action_benefits_dashboard" name="Benefits" sequence="10"/>
+
+</odoo>
