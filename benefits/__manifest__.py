@@ -1,7 +1,7 @@
 {
     "name": "Benefits for employee",
     "version": "1.0.0",
-    "category": "Custom",
+    "category": "Human Resources",
     "summary": "benefits for you",
     "description": "benefits for your employee",
     "author": "Anton Titenko",
