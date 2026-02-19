@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 class CustomFieldHrEmployee(models.Model):
     _inherit = 'hr.employee'
@@ -15,10 +15,8 @@ class CustomFieldHrEmployee(models.Model):
 
     show_benefits = fields.Boolean(compute='_compute_show_benefits')
 
-    @api.depends('user_id')
     def _compute_show_benefits(self):
         for record in self:
-            record.show_benefits = (
-                    record.user_id == self.env.user
-                    or self.env.user.has_group('hr.group_hr_manager')
-            )
+            is_owner = record.user_id == self.env.user
+            is_manager = self.env.user.has_group('hr.group_hr_manager')
+            record.show_benefits = is_owner or is_manager
