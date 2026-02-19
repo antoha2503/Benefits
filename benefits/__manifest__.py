@@ -5,7 +5,7 @@
     "summary": "benefits for you",
     "description": "benefits for your employee",
     "author": "Anton Titenko",
-    "website": "https://example.com",
+    "website": "https://github.com/antoha2503",
     "license": "LGPL-3",
     'price': "0",
     'currency': 'USD',
