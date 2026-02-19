@@ -50,25 +50,6 @@ class UserCompensation(models.Model):
     def _apply_done_logic(self):
         self.dashboard_id.write({'total':self.dashboard_id.total - self.amount})
 
-
-    # def write(self, vals):
-    #     if 'state' in vals:
-    #         for record in self:
-    #             if record.state == vals['state']:
-    #                 return super().write(vals)
-    #
-    #     res = super().write(vals)
-    #
-    #     if 'state' in vals:
-    #         for record in self:
-    #             if vals['state'] == 'done':
-    #                 record._apply_done_logic()
-    #
-    #             elif vals['state'] == 'canceled':
-    #                 record._apply_cancel_logic()
-    #
-    #     return res
-
     def write(self, vals):
         if 'state' not in vals:
             return super().write(vals)
