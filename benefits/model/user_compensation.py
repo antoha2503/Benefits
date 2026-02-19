@@ -17,7 +17,6 @@ class UserCompensation(models.Model):
     dashboard_id = fields.Many2one('benefits.dashboard', ondelete='cascade')
     type_compensation = fields.Many2one('category.compensation', string='Compensation Type', required=True)
 
-    # import_file = fields.Binary('Import file')
 
     date_create = fields.Date(string='Date', default=fields.Date.context_today, readonly=True)
 
@@ -101,3 +100,4 @@ class UserCompensation(models.Model):
                 record.dashboard_id.total += record.amount
 
         return res
+

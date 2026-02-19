@@ -9,10 +9,10 @@
                 <header groups="base.group_system">
                     <button name="action_canceled" type="object"
                             string="Canceled"
-                            state="waiting"/>
+                            invisible="state != 'waiting'"/>
                     <button name="action_done" type="object"
                             string="Approved"
-                            state="waiting"/>
+                            invisible="state != 'waiting'"/>
                     <field name="state" widget="statusbar" statusbar_visible="waiting,done,canceled"/>
                 </header>
                 <sheet>
@@ -55,6 +55,9 @@
                     <filter string="By State" name="group_by_state" domain="[]" context="{'group_by':'state'}"/>
                     <filter string="By employee" name="group_by_employee" domain="[]" context="{'group_by':'employee_id'}"/>
                 </group>
+                <searchpanel>
+                    <field name="employee_id" icon="fa-filter" enable_counters="1"/>
+                </searchpanel>
             </search>
         </field>
     </record>
@@ -93,6 +96,7 @@
     <record id="action_request_benefits_employee" model="ir.actions.act_window">
         <field name="name">Request benefits</field>
         <field name="res_model">user.compensation</field>
-        <field name="view_mode">kanban,list,form</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="context">{'search_default_group_by_state': 1}</field>
     </record>
 </odoo>
