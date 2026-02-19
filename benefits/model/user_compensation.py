@@ -10,10 +10,10 @@ class UserCompensation(models.Model):
     currency_id = fields.Many2one('res.currency', default=lambda self: self.env.company.currency_id)
     amount = fields.Monetary(currency_field='currency_id', readonly=False)
     state = fields.Selection([
-        ('waiting', 'Waiting'),
+        ('canceled', 'Canceled'),
         ('done', 'Dono'),
-        ('canceled', 'Canceled')
-    ], default='waiting')
+        ('waiting', 'Waiting')
+    ], default='waiting', tracking=True)
     dashboard_id = fields.Many2one('benefits.dashboard', ondelete='cascade')
     type_compensation = fields.Many2one('category.compensation', string='Compensation Type', required=True)
 

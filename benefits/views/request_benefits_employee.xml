@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+<!--  FORM  -->
     <record id="request_benefits_employee_form" model="ir.ui.view">
         <field name="name">request.benefits.employee.form</field>
         <field name="model">user.compensation</field>
@@ -30,7 +31,7 @@
             </form>
         </field>
     </record>
-
+<!--LIST-->
     <record id="request_benefits_employee_list" model="ir.ui.view">
         <field name="name">request.benefits.employee.list</field>
         <field name="model">user.compensation</field>
@@ -44,7 +45,7 @@
             </list>
         </field>
     </record>
-
+<!--SEARCH(filter)-->
     <record id="request_benefits_employee_search" model="ir.ui.view">
         <field name="name">request.benefits.employee.search</field>
         <field name="model">user.compensation</field>
@@ -57,10 +58,41 @@
             </search>
         </field>
     </record>
+<!--KANBAN-->
+   <record id="request_benefits_employee_kanban" model="ir.ui.view">
+    <field name="name">request.benefits.employee.kanban</field>
+    <field name="model">user.compensation</field>
+    <field name="arch" type="xml">
+        <kanban default_group_by="state" default_order="state desc">
+            <field name="state"/>
+            <field name="employee_id"/>
+            <field name="amount"/>
 
+            <templates>
+                <t t-name="card">
+                    <div class="oe_kanban_card">
+                        <strong>
+                            <field name="employee_id"/>
+                        </strong>
+
+                        <div>
+                            <field name="amount"/>
+                        </div>
+
+                        <div>
+                            <field name="state"/>
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
+
+<!--ACTION-->
     <record id="action_request_benefits_employee" model="ir.actions.act_window">
         <field name="name">Request benefits</field>
         <field name="res_model">user.compensation</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">kanban,list,form</field>
     </record>
 </odoo>

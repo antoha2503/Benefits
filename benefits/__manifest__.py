@@ -15,6 +15,7 @@
         "purchase"
     ],
     "data": [
+        "views/add_benefits_employee.xml",
         'views/request_benefits_employee.xml',
         'views/custom_field_HrEmployee.xml',
         'views/create_user_compensation.xml',

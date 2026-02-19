@@ -11,6 +11,8 @@ class BenefitsDashboard(models.Model):
     currency_id = fields.Many2one('res.currency',default=lambda self: self.env.company.currency_id)
     total = fields.Monetary(currency_field='currency_id', readonly=True, default=0.0)
 
+    add_benefits = fields.Monetary(currency_field='currency_id', string='Monthly additions', default=1000.0)
+
     history_ids = fields.One2many('user.compensation', 'dashboard_id', domain=[('state', '!=', 'waiting')])
     waiting_ids = fields.One2many('user.compensation', 'dashboard_id', domain=[('state', '=', 'waiting')])
 
@@ -59,4 +61,4 @@ class BenefitsDashboard(models.Model):
     def _add_benefits_employee(self):
         dashboards = self.search([])
         for dashboard in dashboards:
-            dashboard.total += 1000
+            dashboard.total += dashboard.add_benefits
