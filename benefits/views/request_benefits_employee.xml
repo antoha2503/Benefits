@@ -64,7 +64,7 @@
     <field name="model">user.compensation</field>
     <field name="arch" type="xml">
         <kanban default_group_by="state" default_order="state desc">
-            <field name="state"/>
+            <field name="type_compensation"/>
             <field name="employee_id"/>
             <field name="amount"/>
 
@@ -80,7 +80,7 @@
                         </div>
 
                         <div>
-                            <field name="state"/>
+                            <field name="type_compensation"/>
                         </div>
                     </div>
                 </t>

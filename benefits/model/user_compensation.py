@@ -39,14 +39,8 @@ class UserCompensation(models.Model):
             ])
 
     def action_canceled(self):
-        for record in self:
-            if record.state == 'done':
-                raise UserError("Canceled compensation cannot be marked as canceled.")
         self.dashboard_id.write({'total':self.dashboard_id.total+self.amount})
         self.write({'state': 'canceled'})
 
     def action_done(self):
-        for record in self:
-            if record.state == 'canceled':
-                raise UserError("Canceled compensation cannot be marked as done.")
         self.write({'state': 'done'})
