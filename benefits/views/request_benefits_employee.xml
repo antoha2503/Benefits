@@ -9,11 +9,11 @@
                 <header groups="base.group_system">
                     <button name="action_canceled" type="object"
                             string="Canceled"
-                            state="canceled"/>
+                            state="waiting"/>
                     <button name="action_done" type="object"
                             string="Approved"
-                            state="done"/>
-                    <field name="state" widget="statusbar" statusbar_visible="waiting,canceled,done"/>
+                            state="waiting"/>
+                    <field name="state" widget="statusbar" statusbar_visible="waiting,done,canceled"/>
                 </header>
                 <sheet>
                     <group>
@@ -63,7 +63,7 @@
     <field name="name">request.benefits.employee.kanban</field>
     <field name="model">user.compensation</field>
     <field name="arch" type="xml">
-        <kanban default_group_by="state" default_order="state desc">
+        <kanban default_group_by="state" records_draggable="true" class="o_kanban_small_column" default_order="state desc">
             <field name="type_compensation"/>
             <field name="employee_id"/>
             <field name="amount"/>

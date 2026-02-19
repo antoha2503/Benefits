@@ -10,9 +10,9 @@ class UserCompensation(models.Model):
     currency_id = fields.Many2one('res.currency', default=lambda self: self.env.company.currency_id)
     amount = fields.Monetary(currency_field='currency_id', readonly=False)
     state = fields.Selection([
-        ('canceled', 'Canceled'),
+        ('waiting', 'Waiting'),
         ('done', 'Dono'),
-        ('waiting', 'Waiting')
+        ('canceled', 'Canceled')
     ], default='waiting', tracking=True)
     dashboard_id = fields.Many2one('benefits.dashboard', ondelete='cascade')
     type_compensation = fields.Many2one('category.compensation', string='Compensation Type', required=True)
@@ -39,8 +39,65 @@ class UserCompensation(models.Model):
             ])
 
     def action_canceled(self):
-        self.dashboard_id.write({'total':self.dashboard_id.total+self.amount})
+        # self.dashboard_id.write({'total':self.dashboard_id.total+self.amount})
         self.write({'state': 'canceled'})
 
     def action_done(self):
         self.write({'state': 'done'})
+
+    def _apply_cancel_logic(self):
+        self.dashboard_id.write({'total':self.dashboard_id.total + self.amount})
+
+    def _apply_done_logic(self):
+        self.dashboard_id.write({'total':self.dashboard_id.total - self.amount})
+
+
+    # def write(self, vals):
+    #     if 'state' in vals:
+    #         for record in self:
+    #             if record.state == vals['state']:
+    #                 return super().write(vals)
+    #
+    #     res = super().write(vals)
+    #
+    #     if 'state' in vals:
+    #         for record in self:
+    #             if vals['state'] == 'done':
+    #                 record._apply_done_logic()
+    #
+    #             elif vals['state'] == 'canceled':
+    #                 record._apply_cancel_logic()
+    #
+    #     return res
+
+    def write(self, vals):
+        if 'state' not in vals:
+            return super().write(vals)
+
+        for record in self:
+            old_state = record.state
+            new_state = vals['state']
+
+            # если статус не меняется
+            if old_state == new_state:
+                continue
+
+            # ❌ запрещаем менять финальные статусы
+            if old_state in ['done', 'canceled']:
+                raise UserError("Status is final and cannot be changed.")
+
+            # ❌ разрешены только переходы из waiting
+            if old_state != 'waiting':
+                raise UserError("Invalid state transition.")
+
+        res = super().write(vals)
+
+        # применяем математику только для waiting → ...
+        for record in self:
+            if record.state == 'done':
+                record.dashboard_id.total -= record.amount
+
+            elif record.state == 'canceled':
+                record.dashboard_id.total += record.amount
+
+        return res
