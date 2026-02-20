@@ -1,31 +1,66 @@
-Short Description
+Smart Employee Benefits & Reimbursement Management
 
-The Benefits Dashboard module allows companies to automatically allocate funds for employee benefits and submit reimbursement requests for expenses such as business trips, health, education, and other corporate perks. Everything is managed directly in Odoo, easily and transparently.
+Turn employee benefits into a transparent, automated, and motivating system.
 
-Full Description
+Benefits Dashboard allows companies to manage corporate compensation programs in a structured and fully controlled way — while giving employees a simple and intuitive reimbursement experience.
 
-Benefits Dashboard is designed to make corporate benefits management simple, transparent, and efficient:
+🚀 Key Features
+👤 Employee Self-Service Portal
 
-Key Features:
+Employees can:
 
-Automatic monthly allocation of funds to each employee’s personal benefit account.
+Submit reimbursement requests in just a few clicks
 
-Support for multiple expense categories: health, travel, education, sports, and more.
+Select a compensation category (sports, travel, health, education, etc.)
 
-Allows employees to submit reimbursement requests for their expenses.
+Attach supporting documents (receipts, invoices, confirmations)
 
-Convenient approval and tracking system for managers and HR.
+Track their available balance and request history
 
-Complete history of allocations and reimbursements for full transparency.
+Everything is transparent and easy to understand.
 
-Benefits for Companies and Employees:
+🔍 HR / Administrator Control
 
-Streamlines the management of corporate benefits and reimbursements.
+HR managers can:
 
-Ensures transparency and automation of allocations and payments.
+Review submitted requests
 
-Flexible configuration of expense categories and allocation amounts.
+Approve or reject applications
 
-Enhances employee engagement through a clear and fair benefits system.
+Monitor compensation usage across the company
 
-This module is perfect for companies looking to improve transparency and efficiency in benefits management, reduce manual work, and make reimbursement processes fast and understandable.
+Maintain full audit transparency
+
+No spreadsheets. No manual tracking. Everything inside Odoo.
+
+💰 Automatic Monthly Benefit Allocation
+
+Automatically allocate a fixed monthly amount to each employee
+
+Fully configurable per employee
+
+Managed via Scheduled Actions (no manual work required)
+
+Employees accumulate benefit funds and use them when needed.
+
+⚙️ Flexible Compensation Configuration
+
+Administrators can:
+
+Create and manage compensation categories
+
+Define monthly allocation amounts per employee
+
+Customize benefit policies according to company rules
+
+The module adapts to your internal benefit strategy.
+
+📊 Why Companies Choose This Module
+
+✔ Increase employee satisfaction and engagement
+✔ Automate benefit fund management
+✔ Ensure transparency and financial control
+✔ Reduce administrative workload
+✔ Centralize all benefit operations in Odoo
+
+Perfect for companies that provide corporate perks, wellness budgets, education compensation, or travel reimbursements.

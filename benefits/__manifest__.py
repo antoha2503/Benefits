@@ -1,10 +1,10 @@
 {
-    "name": "Benefits for employee",
+    "name": "Benefits Dashboard",
     "version": "1.0.0",
     "category": "Human Resources",
     "summary": "benefits for you",
     "description": "benefits for your employee",
-    "author": "Anton Titenko",
+    "author": "Anton Tytenko",
     "website": "https://github.com/antoha2503",
     "license": "LGPL-3",
     'price': "0",
