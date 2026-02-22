@@ -11,7 +11,7 @@ class UserCompensation(models.Model):
     amount = fields.Monetary(currency_field='currency_id', readonly=False)
     state = fields.Selection([
         ('waiting', 'Waiting'),
-        ('done', 'Dono'),
+        ('done', 'Done'),
         ('canceled', 'Canceled')
     ], default='waiting', tracking=True)
     dashboard_id = fields.Many2one('benefits.dashboard', ondelete='cascade')
@@ -47,8 +47,8 @@ class UserCompensation(models.Model):
     def _apply_cancel_logic(self):
         self.dashboard_id.write({'total':self.dashboard_id.total + self.amount})
 
-    def _apply_done_logic(self):
-        pass
+    # def _apply_done_logic(self):
+    #     pass
 
     def write(self, vals):
         if 'state' not in vals:
