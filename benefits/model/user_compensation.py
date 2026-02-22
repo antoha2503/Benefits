@@ -48,7 +48,7 @@ class UserCompensation(models.Model):
         self.dashboard_id.write({'total':self.dashboard_id.total + self.amount})
 
     def _apply_done_logic(self):
-        self.dashboard_id.write({'total':self.dashboard_id.total - self.amount})
+        pass
 
     def write(self, vals):
         if 'state' not in vals:
@@ -74,10 +74,7 @@ class UserCompensation(models.Model):
 
         # применяем математику только для waiting → ...
         for record in self:
-            if record.state == 'done':
-                record.dashboard_id.total -= record.amount
-
-            elif record.state == 'canceled':
+            if record.state == 'canceled':
                 record.dashboard_id.total += record.amount
 
         return res
