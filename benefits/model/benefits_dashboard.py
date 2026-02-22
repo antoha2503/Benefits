@@ -9,7 +9,7 @@ class BenefitsDashboard(models.Model):
     employee_id = fields.Many2one('hr.employee', string='Employee', default=lambda self: self.env.user.employee_id, readonly=True, required=True)
 
     currency_id = fields.Many2one('res.currency',default=lambda self: self.env.company.currency_id)
-    total = fields.Monetary(currency_field='currency_id', readonly=True, default=0.0)
+    total = fields.Monetary(currency_field='currency_id', readonly=True, default=1000.0)
 
     add_benefits = fields.Monetary(currency_field='currency_id', string='Monthly additions', default=1000.0)
 
