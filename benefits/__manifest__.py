@@ -9,8 +9,7 @@
     "license": "LGPL-3",
     'price': "0",
     'currency': 'USD',
-    'images': ['static/description/icon_screenshot.png
-'],
+    'images': ['static/description/icon_screenshot.png'],
     "depends": [
         "base",
         "purchase"
