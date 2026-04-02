@@ -4,7 +4,7 @@
     "category": "Human Resources",
     "summary": "The Benefits Dashboard module allows companies to automatically allocate funds for employee benefits and submit reimbursement requests for expenses such as business trips, health, education, and other corporate perks. Everything is managed directly in Odoo, easily and transparently.",
     "description": "The Benefits Dashboard module allows companies to automatically allocate funds for employee benefits and submit reimbursement requests for expenses such as business trips, health, education, and other corporate perks. Everything is managed directly in Odoo, easily and transparently.",
-    "author": "Anton Tytenko",
+    "author": "TytencoSoft",
     "website": "https://github.com/antoha2503",
     "license": "LGPL-3",
     'price': "0",
